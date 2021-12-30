@@ -81,14 +81,14 @@ cd /tmp
 git clone https://github.com/joleeee/nous
 cd nous
 sudo cp nous /usr/share/X11/xkb/symbols
-sudo echo -e \
+echo -e \
 'Section "InputClass"\n'\
 '	Identifier "system-keyboard"\n'\
 '	MatchIsKeyboard "on"\n'\
 '	Option "XkbLayout" "nous"\n'\
 '	Option "XkbModel" "pc102"\n'\
 '	Option "XkbOptions" "caps:swapescape"\n'\
-'EndSection' >> /etc/X11/xorg.conf.d/00-keyboard.conf
+'EndSection' | sudo tee /etc/X11/xorg.conf.d/00-keyboard.conf
 
 echo "Installing Klaus..."
 cd ~
