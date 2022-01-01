@@ -104,14 +104,14 @@ echo -e \
 	"gtk-theme-name = \"$GTK_THEME\"\n"\
 	"gtk-icon-theme-name = \"$GTK_ICONS\"\n"\
 	"gtk-font-name = \"$GTK_FONT\"\n"\
-	>> .gtkrc-2.0
+	> .gtkrc-2.0
 mkdir .config/gtk-3.0
 echo -e \
 	"[Settings]\n"\
 	"gtk-theme-name = \"$GTK_THEME\"\n"\
 	"gtk-icon-theme-name = \"$GTK_ICONS\"\n"\
 	"gtk-font-name = \"$GTK_FONT\"\n"\
-	>> .config/gtk-3.0/settings.ini
+	> .config/gtk-3.0/settings.ini
 
 echo "Enabling ly..."
 sudo systemctl enable ly.service
@@ -123,7 +123,7 @@ echo -e \
 	'XDG_DOWNLOAD_DIR  = "$HOME/dls"\n'\
 	'XDG_DOCUMENTS_DIR = "$HOME/docs"\n'\
 	'XDG_PICTURES_DIR  = "$HOME/pics"\n'\
-	>> .config/user-dirs.dirs
+	> .config/user-dirs.dirs
 
 echo "Starting pulseaudio..."
 pulseaudio --start
