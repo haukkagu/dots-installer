@@ -30,6 +30,7 @@ fi
 
 echo "Installing packages..."
 sudo pacman --noconfirm -S git base-devel \
+	bluez bluez-utils \
 	xorg xorg-xinit libx11 libxinerama freetype2 \
 	feh picom dunst sxhkd \
 	vim firefox emacs sxiv flameshot gimp htop neofetch \
@@ -116,6 +117,9 @@ echo -e \
 
 echo "Enabling ly..."
 sudo systemctl enable ly.service
+
+echo "Enabling bluetooth..."
+sudo systemctl enable bluetooth
 
 echo "Setting up the home directory..."
 cd ~
