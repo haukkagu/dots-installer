@@ -50,6 +50,7 @@ echo "Installing dotfiles..."
 cd /tmp
 git clone https://github.com/haukkagu/dots
 mv dots/* ~/
+mv dots/.* ~/
 
 echo "Installing dwm..."
 cd ~/.config/dwm
