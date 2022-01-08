@@ -123,8 +123,9 @@ sudo systemctl enable bluetooth
 
 echo "Setting up the home directory..."
 cd ~
-mkdir docs dls pics scripts projs
+mkdir dskt docs dls pics scripts projs
 echo -e \
+	'XDG_DESKTOP_DIR  = "$HOME/dskt"\n'\
 	'XDG_DOWNLOAD_DIR  = "$HOME/dls"\n'\
 	'XDG_DOCUMENTS_DIR = "$HOME/docs"\n'\
 	'XDG_PICTURES_DIR  = "$HOME/pics"\n'\
